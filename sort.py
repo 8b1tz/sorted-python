@@ -108,7 +108,7 @@ def shellSort(lista):
 # ------------------------------------------------------------------------------
 
 
-def HeapAdjust(lista, inicio, fim):  # o root tem q ser o max da lista, depois troca com o
+def heapAdjust(lista, inicio, fim):  # o root tem q ser o max da lista, depois troca com o
     root = inicio  # o filho q esta em ultimo na lista sequencial e então sai da Heap,
     while True:  # uma vez que ele já em seu lugar, isso acontece até sobrar apenas 1 elemento
         filho = 2 * root + 1
@@ -124,7 +124,7 @@ def HeapAdjust(lista, inicio, fim):  # o root tem q ser o max da lista, depois t
             break
 
 
-def HeapSort(lista):
+def heapSort(lista):
     inicio = len(lista) // 2 - 1  # inicio = metade - 1
     for inicio in range(inicio, - 1, -1):  # Montando Heap
         HeapAdjust(lista, inicio, len(lista) - 1)
